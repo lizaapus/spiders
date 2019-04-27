@@ -23,6 +23,7 @@ class CompanybjSpider(scrapy.Spider):
             item['location'] = div.re_first("<span>所在地：(.*?)</span>")
             
             icount = icount+1
+            print(item)
             yield item
         
         self.page += 1
