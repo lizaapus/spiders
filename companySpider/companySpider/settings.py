@@ -64,9 +64,21 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
+ITEM_PIPELINES = {
 #    'companySpider.pipelines.CompanyspiderPipeline': 300,
-#}
+    # 'companySpider.pipelines.MysqlPipeline': 301,
+    'companySpider.pipelines.MongoPipeline': 302,
+}
+MYSQL_HOST="192.168.106.60"
+MYSQL_DATABASE="test"
+MYSQL_USER="root"
+MYSQL_PASS="cnkittod"
+MYSQL_PORT=3306
+
+MONGODB_SERVER = "192.168.106.56"
+MONGODB_PORT = 27017
+MONGODB_DB = "3618med"
+MONGO_URI = "mongodb://192.168.106.56:27017"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
